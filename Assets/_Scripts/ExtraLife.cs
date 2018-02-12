@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ExtraLife : MonoBehaviour {
 
-//	void OnCollisionEnter(Collision Other)
-//	{
-//		GM.instance.GainLife ();
-//	}
+	void OnCollisionEnter(Collision Other)
+	{
+		GM.instance.GainLife ();
+	}
 }

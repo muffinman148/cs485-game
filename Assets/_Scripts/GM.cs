@@ -15,7 +15,8 @@ public class GM : MonoBehaviour {
 	public GameObject bricksPrefab;
 	public GameObject paddle;
 	public GameObject deathParticles;
-	//public GameObject extraLife;
+	public GameObject extraLife;
+	public GameObject powerUp;
 
 	public static GM instance = null;
 
@@ -37,6 +38,8 @@ public class GM : MonoBehaviour {
 	{
 		clonePaddle = Instantiate(paddle, transform.position, Quaternion.identity) as GameObject;
 		Instantiate(bricksPrefab, transform.position, Quaternion.identity);
+		Instantiate(powerUp, transform.position, Quaternion.identity);
+		Instantiate(extraLife, transform.position, Quaternion.identity);
 	}
 
 	void CheckGameOver()
@@ -73,11 +76,16 @@ public class GM : MonoBehaviour {
 		CheckGameOver();
 	}
 
-//	public void GainLife()
-//	{
-//		lives++;
-//		livesText.text = "Lives: " + lives;
-//	}
+	public void GainLife()
+	{
+		lives++;
+		livesText.text = "Lives: " + lives;
+	}
+
+	public void ScalePaddle()
+	{
+		paddle.gameObject.transform.localScale += new Vector3(10F, 0, 0);
+	}
 
 	void SetupPaddle()
 	{
