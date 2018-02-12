@@ -1,7 +1,7 @@
-# cs485-game
+# CS485 Individual Game
 Marc Geis
 
-## Description of Name
+## Description of Game
 This game is a simple breakout game where the objective is to remove all the rectangle blocks without losing all of your lives. 
 
 
